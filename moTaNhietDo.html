@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(x) {
+        this.primeC = x;
+        this.changeCtoF = function ChangeCtoF() {
+            return this.primeC * 9/5 + 32;
+        };
+        this.changeCtoK = function ChangeCtoK() {
+            return this.primeC + 273.15;
+        };
+    }
+    let Temperature1 = new Temperature(parseInt(prompt('Nhập vào nhiệt độ bạn muốn đổi')));
+    document.write(Temperature1.primeC + " độ C bằng " + Temperature1.changeCtoF()+ " Độ F" );
+    document.write("<br>"+Temperature1.primeC+ " độ C bằng " + Temperature1.changeCtoK()+ " Độ K" );
+</script>
+</body>
+</html>
